@@ -6,3 +6,4 @@ function valor = is_an_empty(directorio)
     nameFolds(ismember(nameFolds,{'.','..'})) = [];
     valor = isempty(nameFolds);
 end
+
