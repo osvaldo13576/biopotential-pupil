@@ -1,9 +1,8 @@
-%% abriendo pupil positions
+cc%% abriendo pupil positions
 directorio = '/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/000/pupil_positions.csv';
 datos = readtable(directorio);
 %% vamos a leer un video
-video_eye_dir = ['/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/003/' ...
-    'world.mp4'];
+video_eye_dir = ['/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/003/world.mp4'];
 vid_eye0 = VideoReader(video_eye_dir);
 fra = vid_eye0.NumFrames
 %%
@@ -35,3 +34,24 @@ for k = 1:1000
     pause(1)
 end
 
+%% 
+dir = '/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/001/world_timestamps.csv';
+tabla =readtable(dir);
+%dat=tabla.c;
+%%
+x = 0:360;
+y = sind(x);
+% Only show one marker, at the x value where the xline is located
+s = plot(x, y, 'o-', 'MarkerIndices', 1);
+h = xline(x(1));
+% Use the title to show where the xline is located
+t = title("Sine curve with xline at x = " + x(1));
+for k = 2:numel(x)
+    h.Value = x(k);
+    % 'move' the marker along the sine curve
+    s.MarkerIndices = k;
+    % Update the title string
+    t.String = "Sine curve with xline at x = " + x(k);
+    % Let's go a little faster
+    pause(1/36);
+end
