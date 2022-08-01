@@ -1,4 +1,4 @@
-cc%% abriendo pupil positions
+%% abriendo pupil positions
 directorio = '/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/000/pupil_positions.csv';
 datos = readtable(directorio);
 %% vamos a leer un video
