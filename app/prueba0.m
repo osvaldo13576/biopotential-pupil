@@ -55,3 +55,16 @@ for k = 2:numel(x)
     % Let's go a little faster
     pause(1/36);
 end
+%% vista de la variable generada por csv_to_binary_blinks
+archivo = '/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/003/blinks.csv';
+archivo2 = '/home/osvaldo13576/Documentos/Servicio/pupil_data/2022_06_03/000/exports/003/world_timestamps.csv';
+num_datos = num_csv(archivo2);
+
+datos = csv_to_binary_blinks(archivo,num_datos);
+
+%% read hdf5
+archivo = 'file.hdf5';
+file_hdf5 = h5disp(archivo)  
+
+
+
