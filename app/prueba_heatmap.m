@@ -50,7 +50,7 @@ datos.Var6(1)
 %
 %convert_timestamp(1668451922)
 
-datosECG= loadEEG('/home/osvaldo13576/Documents/14_11_2022/003/eeg_tarea/eeg_data_data.txt',1668451922);
+datosECG= loadEEG('/home/osvaldo13576/Documents/14_11_2022/003/eeg_tarea/eeg_data_data.txt',1668451922.6);
 %%
 data=datosECG(:,2:end);
 
